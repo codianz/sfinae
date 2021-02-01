@@ -24,7 +24,7 @@ struct C {
 // class T に funcA が存在するかを確認する
 template <typename T> class has_funcA {
 private:
-    // 「int _ = (&X::funcA, 0)」が謎めいているが順を追って考えると
+    // 「int = (&X::funcA, 0)」が謎めいているが順を追って考えると
     //  「&X::funcA」とあるが、こいつはX::funcAの関数へのポインタ（実アドレス）
     // つまり、この時点で X に funcA が存在しないとエラーとなり
     // オーバーロードしている test() 関数の候補から外れる。
